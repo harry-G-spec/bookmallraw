@@ -1,4 +1,4 @@
-import { Book, User, Chat, Message } from '../types';
+import { Book, User, Chat, Message, Feedback } from '../types';
 
 // Mock Users
 export const users: User[] = [
@@ -247,6 +247,94 @@ export const chats: Chat[] = [
   }
 ];
 
+// Mock Feedbacks
+export const feedbacks: Feedback[] = [
+  {
+    id: 'f1',
+    userId: '1',
+    user: users[0],
+    title: 'Add wishlist feature',
+    content: 'It would be great to have a wishlist feature where users can save books they want to buy later. This would help keep track of interesting books without having to remember them.',
+    category: 'feature',
+    priority: 'medium',
+    status: 'open',
+    upvotes: 15,
+    upvotedBy: ['2', '3', '4', '5', '6'],
+    createdAt: '2024-03-10T08:30:00Z',
+    updatedAt: '2024-03-10T08:30:00Z',
+  },
+  {
+    id: 'f2',
+    userId: '3',
+    user: users[2],
+    title: 'Search filters not working properly',
+    content: 'When I try to filter books by price range, sometimes the results include books outside the specified range. This happens especially with the maximum price filter.',
+    category: 'bug',
+    priority: 'high',
+    status: 'in-progress',
+    upvotes: 8,
+    upvotedBy: ['1', '4', '6'],
+    createdAt: '2024-03-12T14:20:00Z',
+    updatedAt: '2024-03-13T09:15:00Z',
+  },
+  {
+    id: 'f3',
+    userId: '2',
+    user: users[1],
+    title: 'Improve mobile chat interface',
+    content: 'The chat interface on mobile could be improved. The text input sometimes gets hidden behind the keyboard, and it\'s hard to scroll through long conversations.',
+    category: 'improvement',
+    priority: 'medium',
+    status: 'open',
+    upvotes: 12,
+    upvotedBy: ['1', '3', '5', '6'],
+    createdAt: '2024-03-11T16:45:00Z',
+    updatedAt: '2024-03-11T16:45:00Z',
+  },
+  {
+    id: 'f4',
+    userId: '4',
+    user: users[3],
+    title: 'Book condition descriptions',
+    content: 'Could you provide more detailed descriptions for each book condition category? Sometimes it\'s unclear what qualifies as "Good" vs "Very Good".',
+    category: 'improvement',
+    priority: 'low',
+    status: 'resolved',
+    upvotes: 6,
+    upvotedBy: ['2', '5'],
+    createdAt: '2024-03-09T11:30:00Z',
+    updatedAt: '2024-03-14T10:20:00Z',
+  },
+  {
+    id: 'f5',
+    userId: '5',
+    user: users[4],
+    title: 'Love the new design!',
+    content: 'Just wanted to say that the recent design updates look amazing! The book cards are much more appealing now and the overall user experience has improved significantly.',
+    category: 'general',
+    priority: 'low',
+    status: 'closed',
+    upvotes: 23,
+    upvotedBy: ['1', '2', '3', '4', '6'],
+    createdAt: '2024-03-08T09:15:00Z',
+    updatedAt: '2024-03-08T09:15:00Z',
+  },
+  {
+    id: 'f6',
+    userId: '6',
+    user: currentUser,
+    title: 'Notification system needed',
+    content: 'It would be helpful to have email notifications when someone messages about a book listing or when there are updates to feedback I\'ve submitted.',
+    category: 'feature',
+    priority: 'medium',
+    status: 'open',
+    upvotes: 9,
+    upvotedBy: ['1', '2', '4'],
+    createdAt: '2024-03-13T13:20:00Z',
+    updatedAt: '2024-03-13T13:20:00Z',
+  }
+];
+
 // Filter options
 export const genres = [
   'Fiction', 
@@ -272,4 +360,25 @@ export const conditions = [
   'Good', 
   'Fair', 
   'Poor'
+];
+
+// Feedback categories and priorities
+export const feedbackCategories = [
+  { value: 'bug', label: 'Bug Report', color: 'bg-red-100 text-red-800' },
+  { value: 'feature', label: 'Feature Request', color: 'bg-blue-100 text-blue-800' },
+  { value: 'improvement', label: 'Improvement', color: 'bg-yellow-100 text-yellow-800' },
+  { value: 'general', label: 'General Feedback', color: 'bg-green-100 text-green-800' }
+];
+
+export const feedbackPriorities = [
+  { value: 'low', label: 'Low', color: 'bg-gray-100 text-gray-800' },
+  { value: 'medium', label: 'Medium', color: 'bg-orange-100 text-orange-800' },
+  { value: 'high', label: 'High', color: 'bg-red-100 text-red-800' }
+];
+
+export const feedbackStatuses = [
+  { value: 'open', label: 'Open', color: 'bg-blue-100 text-blue-800' },
+  { value: 'in-progress', label: 'In Progress', color: 'bg-yellow-100 text-yellow-800' },
+  { value: 'resolved', label: 'Resolved', color: 'bg-green-100 text-green-800' },
+  { value: 'closed', label: 'Closed', color: 'bg-gray-100 text-gray-800' }
 ];

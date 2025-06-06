@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Search, BookOpen, MessageSquare, Menu, X, Library } from 'lucide-react';
+import { Search, BookOpen, MessageSquare, Menu, X, Library, MessageCircle } from 'lucide-react';
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -49,8 +49,16 @@ const Navbar = () => {
             <Link 
               to="/my-listings" 
               className="p-2 rounded-full hover:bg-gray-100"
+              title="My Listings"
             >
               <Library className="h-6 w-6 text-gray-600" />
+            </Link>
+            <Link 
+              to="/feedback" 
+              className="p-2 rounded-full hover:bg-gray-100"
+              title="Feedback"
+            >
+              <MessageCircle className="h-6 w-6 text-gray-600" />
             </Link>
             <Link 
               to="/sell" 
@@ -61,6 +69,7 @@ const Navbar = () => {
             <Link 
               to="/chats" 
               className="relative p-2 rounded-full hover:bg-gray-100"
+              title="Messages"
             >
               <MessageSquare className="h-6 w-6 text-gray-600" />
               <span className="absolute top-0 right-0 block h-2 w-2 rounded-full bg-accent-500 ring-2 ring-white" />
@@ -120,6 +129,15 @@ const Navbar = () => {
             >
               <Library className="mr-3 h-6 w-6 text-gray-500" />
               My Listings
+            </Link>
+            
+            <Link 
+              to="/feedback" 
+              className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <MessageCircle className="mr-3 h-6 w-6 text-gray-500" />
+              Feedback
             </Link>
             
             <Link 

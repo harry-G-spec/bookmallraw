@@ -48,8 +48,8 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><Link to="/sell" className="text-gray-300 hover:text-white transition-colors">Sell Books</Link></li>
               <li><Link to="/chats" className="text-gray-300 hover:text-white transition-colors">My Messages</Link></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">My Orders</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">My Listings</a></li>
+              <li><Link to="/my-listings" className="text-gray-300 hover:text-white transition-colors">My Listings</Link></li>
+              <li><Link to="/feedback" className="text-gray-300 hover:text-white transition-colors">Feedback</Link></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">My Profile</a></li>
             </ul>
           </div>

@@ -53,3 +53,18 @@ export interface Filter {
   condition: string[];
   genre: string[];
 }
+
+export interface Feedback {
+  id: string;
+  userId: string;
+  user: User;
+  title: string;
+  content: string;
+  category: 'bug' | 'feature' | 'improvement' | 'general';
+  priority: 'low' | 'medium' | 'high';
+  status: 'open' | 'in-progress' | 'resolved' | 'closed';
+  upvotes: number;
+  upvotedBy: string[];
+  createdAt: string;
+  updatedAt: string;
+}

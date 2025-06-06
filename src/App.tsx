@@ -6,6 +6,7 @@ import ChatPage from './pages/ChatPage';
 import SellBookPage from './pages/SellBookPage';
 import LoginPage from './pages/LoginPage';
 import MyListingsPage from './pages/MyListingsPage';
+import FeedbackPage from './pages/FeedbackPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/chats/:sellerId" element={<ChatPage />} />
         <Route path="/sell" element={<SellBookPage />} />
         <Route path="/my-listings" element={<MyListingsPage />} />
+        <Route path="/feedback" element={<FeedbackPage />} />
       </Route>
     </Routes>
   );
